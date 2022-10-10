@@ -16,7 +16,7 @@ jobs:
         run: yarn && cd docs && yarn
       
       - name: Build the plugin
-        run: yarn build
+        run: cd docs && yarn build
 
       - name: Build and Deploy
         uses: jenkey2011/vuepress-deploy@master
@@ -26,5 +26,5 @@ jobs:
           # ever needed
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           TARGET_BRANCH: docs
-          BUILD_SCRIPT: yarn build:docs
+          BUILD_SCRIPT: yarn build
           BUILD_DIR: docs/src/.vuepress/dist
