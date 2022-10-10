@@ -1,0 +1,17 @@
+{
+  "name": "vuepress-plugin-text-to-speech",
+  "author": {
+    "name": "khang-nd",
+    "email": "khang.nguyenduyvn@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khang-nd/vuepress-plugin-text-to-speech"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@vuepress/plugin-register-components": "^1.9.7"
+  }
+}
