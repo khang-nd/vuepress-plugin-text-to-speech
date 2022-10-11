@@ -4,7 +4,6 @@ sidebar: auto
 
 # Guide
 
-<center><read-button /> ← <i>Demo</i></center>
 
 Vuepress Text To Speech Plugin allows you to create a __renderless component__ that reads aloud the text content on the page.
 

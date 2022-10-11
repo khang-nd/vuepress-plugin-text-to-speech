@@ -13,10 +13,10 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Install dependencies
-        run: yarn && cd docs && yarn
+        run: yarn
       
       - name: Build the plugin
-        run: cd docs && yarn build
+        run: yarn build
 
       - name: Build and Deploy
         uses: jenkey2011/vuepress-deploy@master
@@ -27,4 +27,4 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           TARGET_BRANCH: docs
           BUILD_SCRIPT: yarn build
-          BUILD_DIR: docs/src/.vuepress/dist
+          BUILD_DIR: docs/.vuepress/dist
