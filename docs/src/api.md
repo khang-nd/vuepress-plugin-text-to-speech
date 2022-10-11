@@ -16,19 +16,19 @@ module.exports = {
 }
 ```
 
-### `selector`
+### `contentSelector`
 
 * Type: __String__
 * Default: __`.content__default`__
 
-Specifies the text container selector globally, may be overridden by the [`selector` prop](#selector-2) on the component.
+Specifies the text container selector globally, may be overridden by the [`selector` prop](#selector) on the component.
 
 ```js
 // config.js
 module.exports = {
   ...
   plugins: [
-    ['text-to-speech', { selector: '.my_content_selector' }]
+    ['text-to-speech', { contentSelector: '.my_content_selector' }]
   ]
 }
 ```
@@ -52,7 +52,7 @@ Exposed object:
 ### `selector`
 
 * Type: __String__
-* Default: plugin's [`selector` option](#selector)
+* Default: plugin's [`contentSelector` option](#contentselector)
 
 Specifies the text container selector on component level.
 

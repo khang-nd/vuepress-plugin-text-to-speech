@@ -1,7 +1,12 @@
 {
   "name": "vuepress-plugin-text-to-speech",
-  "version": "1.0.1",
-  "keywords": ["text-to-speech", "vuepress"],
+  "description": "Vuepress plugin to read aloud page's text content.",
+  "version": "1.0.3",
+  "homepage": "https://khang-nd.github.io/vuepress-plugin-text-to-speech",
+  "keywords": [
+    "text-to-speech",
+    "vuepress"
+  ],
   "author": {
     "name": "khang-nd",
     "email": "khang.nguyenduyvn@gmail.com"
@@ -11,8 +16,5 @@
     "url": "https://github.com/khang-nd/vuepress-plugin-text-to-speech"
   },
   "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "@vuepress/plugin-register-components": "^1.9.7"
-  }
+  "license": "MIT"
 }

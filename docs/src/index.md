@@ -12,6 +12,10 @@ Vuepress Text To Speech Plugin allows you to create a __renderless component__ t
 As the name implies, these components do not render any HTML output, but rather just act as a logic wrapper for the inner components.
 :::
 
+::: warning Important
+This plugin only works with __Vuepress 1.x__.
+:::
+
 ## How it works
 
 The plugin performs some basic DOM queries to collect the text content (including the headings, paragraphs and lists) on the page, and uses the [SpeechSynthesis API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis) to read aloud the collected text.

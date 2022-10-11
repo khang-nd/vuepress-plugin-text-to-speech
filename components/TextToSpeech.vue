@@ -7,7 +7,6 @@ export default {
   },
   data() {
     return {
-      pageContent: "",
       isSupported: true,
       isPlaying: false,
       isPaused: false,
@@ -28,25 +27,21 @@ export default {
     this.isSupported = "speechSynthesis" in window;
     this.$emit("supported", this.isSupported);
     this.emit("stopped");
-
-    if (!this.isSupported) {
-      return;
-    }
-
-    if (this.content) {
-      this.pageContent = this.content;
-      return;
-    }
-
-    const selectors = ["h1", "h2", "h3", "h4", "h5", "h6", "p", "li"];
-    const contentSelectors =
-      this.selector + " " + selectors.join(`,${this.selector} `);
-    const contentElems = this.$root.$el.querySelectorAll(contentSelectors);
-    this.pageContent = Array.from(contentElems)
-      .map((p) => p.textContent)
-      .join(". ");
   },
   methods: {
+    getContent() {
+      if (this.content) {
+        return this.content;
+      }
+
+      const selectors = ["h1", "h2", "h3", "h4", "h5", "h6", "p", "li"];
+      const contentSelectors =
+        this.selector + " " + selectors.join(`,${this.selector} `);
+      const contentElems = this.$root.$el.querySelectorAll(contentSelectors);
+      return Array.from(contentElems)
+        .map((p) => p.textContent)
+        .join(". ");
+    },
     toggle() {
       if (!this.isSupported) {
         return;
@@ -62,7 +57,7 @@ export default {
         return;
       }
 
-      const utterance = new SpeechSynthesisUtterance(this.pageContent);
+      const utterance = new SpeechSynthesisUtterance(this.getContent());
       utterance.onstart = () => {
         this.isPlaying = true;
         this.emit("playing");

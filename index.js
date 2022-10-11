@@ -4,7 +4,7 @@ module.exports = (options, ctx) => ({
   name: "vuepress-plugin-text-to-speech",
   define() {
     return {
-      SELECTOR: options.selector || ".content__default",
+      SELECTOR: options.contentSelector || ".content__default",
     };
   },
   plugins: [
