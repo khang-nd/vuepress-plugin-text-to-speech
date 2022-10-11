@@ -4,9 +4,10 @@ module.exports = {
   base: "/vuepress-plugin-text-to-speech/",
 
   themeConfig: {
-    repo: "https://github.com/visnalize/vuepress-plugin-text-to-speech",
+    repo: "https://github.com/khang-nd/vuepress-plugin-text-to-speech",
     editLinks: true,
-    docsDir: "src",
+    docsDir: "docs",
+    docsBranch: "main",
     lastUpdated: true,
     nav: [
       {
@@ -15,7 +16,7 @@ module.exports = {
       },
       {
         text: "API Reference",
-        link: "/api/",
+        link: "/api",
       },
     ],
   },
