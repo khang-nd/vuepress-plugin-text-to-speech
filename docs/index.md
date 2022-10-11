@@ -4,6 +4,7 @@ sidebar: auto
 
 # Guide
 
+<center><read-button /> ← <i>Demo</i></center>
 
 Vuepress Text To Speech Plugin allows you to create a __renderless component__ that reads aloud the text content on the page.
 
@@ -42,12 +43,12 @@ Define the plugin in `config.js`:
 module.exports = {
   ...
   plugins: [
-    ['text-to-speech', { selector: '.content__default' }]
+    ['text-to-speech', { contentSelector: '.content__default' }]
   ]
 }
 ```
 
-The `selector` option can be defined globally here or locally with the [component props](/api.md#component-props).
+The `contentSelector` option can be defined globally here or locally with the [component props](/api.md#component-props).
 
 ## Usage
 

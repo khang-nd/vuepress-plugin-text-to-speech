@@ -18,8 +18,8 @@ module.exports = {
 
 ### `contentSelector`
 
-* Type: __String__
-* Default: __`.content__default`__
+* Type: `string`
+* Default: `.content__default`
 
 Specifies the text container selector globally, may be overridden by the [`selector` prop](#selector) on the component.
 
@@ -51,7 +51,7 @@ Exposed object:
 
 ### `selector`
 
-* Type: __String__
+* Type: `string`
 * Default: plugin's [`contentSelector` option](#contentselector)
 
 Specifies the text container selector on component level.
@@ -64,7 +64,7 @@ Specifies the text container selector on component level.
 
 ### `content`
 
-* Type: __String__
+* Type: `string`
 
 Specifies the text content to be read, rather than querying the text content on the page with the selectors. Useful to override the text from outside of the TTS component.
 

@@ -19,9 +19,12 @@
   "license": "MIT",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "deploy": "gh-pages -d docs/.vuepress/dist -b docs",
+    "db": "yarn build && yarn deploy"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "vuepress": "^1.9.7"
   }
 }
